@@ -24,6 +24,7 @@ if __name__ == "__main__":
     all_files = os.listdir()
     total_file = 0
     total_word = 0
+    file_names = []
     for file in all_files:
         if file != 'main.py' and file != ".git":
             print(f"Checking {word} in {file}....")
@@ -31,8 +32,12 @@ if __name__ == "__main__":
             if words_in_file:
                 total_word += words_in_file
                 total_file += 1
+                file_names.append(file)
     if total_word:
         print(f"*********************We found {total_word} {word} in {total_file} different files*********************")
+        print("Files are : ")
+        for file in file_names:
+            print(file)
     else:
         print(f"*********************Sorry there is no {word} present in any of the files*********************")
     print("Thank You!!!")
