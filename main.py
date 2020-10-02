@@ -36,12 +36,12 @@ if __name__ == "__main__":
                 total_file += 1
                 file_names.append(file)
     if total_word:
-        print(f"*********************We found {total_word} {word} in {total_file} different files*********************")
+        print(f"**********************We found {total_word} {word} in {total_file} different files**********************")
         print("Files are : ")
         for i in range(len(file_names)):
             print(f"{file_names[i]} contains {words[i]} {word}")
     else:
-        print(f"*********************Sorry there is no {word} present in any of the files*********************")
+        print(f"**********************Sorry there is no {word} present in any of the files**********************")
     print("Thank You!!!")
             
                 
